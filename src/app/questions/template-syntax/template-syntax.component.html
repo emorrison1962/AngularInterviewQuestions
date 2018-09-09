@@ -1,0 +1,119 @@
+<h4>
+  <a id="user-content-template-syntax-questions" class="anchor" aria-hidden="true" href="#template-syntax-questions">
+  </a>Template Syntax Questions:</h4>
+
+<pre>{{lyrics}}
+</pre>
+
+<ul>
+  <aiq-question>How can you add an active class to a selected element in a list component?
+  </aiq-question>
+
+  <aiq-question>What is a template reference variable. How would you use it?
+    <aiq-answer>
+      <aiq-code-snippet header="*.html">
+        <pre>
+    &lt;input (change)="true" (keyup)="0" (select)="0" #textInput type="text"&gt;
+    &lt;label&gt;Template Reference Varible: {{ "{" }}{{ "{" }}textInput.value{{ "}" }}{{ "}" }}
+    &lt;/label&gt;
+        </pre>
+      </aiq-code-snippet>
+
+      <aiq-example header="Result">
+        <div class="col-4">
+          <label>Input:
+            <input placeholder="Input" class="form-control" (change)="true" (keyup)="0" (select)="0" #textInput type="text">
+          </label>
+        </div>
+        <div class="col-4">
+          <label>Template Reference Varible:
+            <input class="form-control" placeholder="Type Input to update." type="text" readonly disabled [ngModel]="textInput.value">
+          </label>
+        </div>
+      </aiq-example>
+    </aiq-answer>
+  </aiq-question>
+
+  <aiq-question>What is the difference of using a property binding verses a function binding on a template?
+    <aiq-answer>
+      <div class="card border-secondary mb-3">
+        <div class="card-header">
+          <strong>*.ts</strong>
+        </div>
+        <div class="card-body">
+          <pre style="margin: 0px;">
+        <code style="margin: 0px;">
+    private _bound: string = "Bound Text."; 
+    
+    //get property
+    get boundString(): string {{ "{" }} 
+      return this._bound; 
+    {{ "}" }} 
+    
+    //get function
+    getBoundString(): string {{ "{" }} 
+      return this._bound; 
+    {{ "}" }}
+          </code>
+          </pre>
+        </div>
+      </div>
+
+      <div class="card border-secondary mb-3">
+        <div class="card-header">
+          <strong>*.html</strong>
+        </div>
+        <div class="card-body">
+          <pre style="margin: 0px;">
+        <code>
+    &lt;input type="text" readonly [ngModel]="boundString" /&gt;
+    &lt;input type="text" readonly [ngModel]="getBoundString()" /&gt;
+        </code>
+        </pre>
+        </div>
+      </div>
+
+      <div class="card border-secondary mb-3">
+        <div class="card-header">
+          <strong>Result</strong>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <label>Property Binding:
+                <input type="text" [(ngModel)]="boundString" />
+              </label>
+            </div>
+            <div class="col-4">
+              <label>Property Binding:
+                <input type="text" readonly disabled [ngModel]="boundString" />
+              </label>
+            </div>
+            <div class="col-4">
+              <label>Function Binding:
+                <input type="text" readonly disabled [ngModel]="getBoundString()" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aiq-answer>
+  </aiq-question>
+
+  <aiq-question>What happens if you subscribe to a data source multiple times with async pipe?
+    <aiq-answer>
+      <aiq-example>
+        <ul class="list-group">
+          <li *ngFor="let num of _numbers">{{num}}</li>
+        </ul>
+      </aiq-example>
+    </aiq-answer>
+  </aiq-question>
+
+  <aiq-question>What is the difference between ng-content, ng-container and ng-template?</aiq-question>
+
+  <aiq-question>When you create a data-binding in Angular, are you working with attributes or properties? What is the
+    difference anyway?</aiq-question>
+
+  <aiq-question>When can you omit the brackets in template binding?</aiq-question>
+</ul>
