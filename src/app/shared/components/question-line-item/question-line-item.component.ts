@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { ContentChildren, Directive, Input, QueryList } from '@angular/core';
 import { AnswerComponent } from 'src/app/shared/components/answer/answer.component';
+import { QuestionAndAnswer } from '../../models/question-and-answer';
 
 
 @Component({
@@ -12,14 +13,20 @@ export class QuestionLineItemComponent implements OnInit, AfterContentInit {
   @ContentChildren(AnswerComponent, { descendants: true })
   answers: QueryList<AnswerComponent>;
   unanswered: boolean;
+
+  @Input()
+  questionAndAnswer: QuestionAndAnswer;
+
   constructor() { }
 
   ngOnInit() {
+    this.unanswered = this.questionAndAnswer.isNotAnswered;
   }
+
 
   ngAfterContentInit() {
     if (0 === this.answers.length) {
-      this.unanswered = true;
+      //this.unanswered = true;
     }
   }
 

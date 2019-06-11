@@ -5,6 +5,69 @@
 </style>
 
 
-<li [class.unanswered]="unanswered">
-  <ng-content></ng-content>
+<li [class.unanswered]="unanswered">{{questionAndAnswer.question}}
+
+  <div id="answer">
+
+    <div id="codeSnippet" *ngIf="questionAndAnswer.codeSnippet" class="card border-secondary mb-3">
+      <div class="card-header" style=" padding-top: 0px; padding-bottom: 0px; ">
+        <strong>*.ts</strong>
+      </div>
+      <div class="card-body">
+        <pre style="margin: 0px;">
+          <code style="margin: 0px;">
+{{questionAndAnswer.codeSnippet}}
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <div id="htmlSnippet" *ngIf="questionAndAnswer.htmlSnippet" class="card border-secondary mb-3" style="margin-top: 4px;">
+      <div class="card-header" style=" padding-top: 5px; padding-bottom: 0px; ">
+        <strong>*.html</strong>
+      </div>
+      <div class="card-body" style=" padding-top: 0px; padding-bottom: 0px; ">
+        <pre style="margin: 0px; padding: 0px;">
+          <code style="margin: 0px; padding: 0px;">
+{{questionAndAnswer.htmlSnippet}}
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <div id="result" class="card border-secondary mb-3">
+      <div class="card-header">
+        <strong>Result</strong>
+      </div>
+      <div class="card-body">
+        <div class="row">
+
+          <ng-content>
+
+          </ng-content>
+
+
+          <!-- <div class="col-4">
+              <label>Property Binding:
+                <input type="text" [(ngModel)]="boundString" />
+              </label>
+            </div>
+            <div class="col-4">
+              <label>Property Binding:
+                <input type="text" readonly disabled [ngModel]="boundString" />
+              </label>
+            </div>
+            <div class="col-4">
+              <label>Function Binding:
+                <input type="text" readonly disabled [ngModel]="getBoundString()" />
+              </label>
+            </div> -->
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
 </li>

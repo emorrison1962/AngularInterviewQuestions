@@ -26,6 +26,17 @@ export class QuestionAndAnswer {
     set codeSnippet(input: string) {
         this._codeSnippet = input.trim();
     }
+
+    get isNotAnswered(): boolean {
+        var result = false;
+        if (null == this.htmlSnippet
+            && null == this.codeSnippet
+            && null == this.answer) {
+            result = true;
+        }
+        return result;
+    }
+
     //#endregion Properties
 
     //#region Construction

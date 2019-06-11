@@ -6,7 +6,40 @@
 </pre>
 
 <ul>
-  <aiq-question>How can you add an active class to a selected element in a list component?
+  <aiq-question [questionAndAnswer]="q1">
+    <div class="col-3">
+      <div class="card">
+        <div class="card-header"><em>Used for validation:</em></div>
+        <div class="card-body">
+          <label>Input:
+            <input placeholder="Input text to clear error." class="form-control" [class.is-invalid]="textInput.invalid"
+              required (change)="true" (keyup)="0" (select)="0" [ngModel] name="textInput" #textInput="ngModel" type="text">
+          </label>
+          <div class="d-block invalid-feedback" *ngIf="textInput.invalid">Required</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card">
+        <div class="card-header"><em>Observing the control:</em></div>
+        <div class="card-body">
+          <label>Value:
+            <input class="form-control" [class.is-invalid]="textInput.invalid" [class.is-valid]="textInput.valid"
+              placeholder="Type Input to update." type="text" readonly disabled [ngModel]="textInput.value">
+          </label>
+          <label>State:
+            <input class="form-control" [class.is-invalid]="textInput.invalid" [class.is-valid]="textInput.valid"
+              placeholder="Type Input to update." type="text" readonly disabled [ngModel]="textInput.statusChanges">
+          </label>
+        </div>
+      </div>
+    </div>
+  </aiq-question>
+
+
+
+  <!-- <aiq-question>How can you add an active class to a selected element in a list component?
   </aiq-question>
 
   <aiq-question>What is a template reference variable. How would you use it?
@@ -115,5 +148,6 @@
   <aiq-question>When you create a data-binding in Angular, are you working with attributes or properties? What is the
     difference anyway?</aiq-question>
 
-  <aiq-question>When can you omit the brackets in template binding?</aiq-question>
+  <aiq-question>When can you omit the brackets in template binding?</aiq-question> -->
+
 </ul>
