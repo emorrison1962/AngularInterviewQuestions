@@ -2,7 +2,7 @@
   <a id="user-content-animations-questions" class="anchor" aria-hidden="true" href="#animations-questions">
   </a>Animations Questions:</h4>
 <ul>
-  <aiq-question>How do you define transition between two states in Angular?
+  <aiq-question-li>How do you define transition between two states in Angular?
     <aiq-answer>
       <ul class="list-group md-2">
         <li class="list-group-item" *ngFor="let hero of heroes" [@heroState]="hero.state" (click)="hero.toggleState()">
@@ -10,15 +10,16 @@
         </li>
       </ul>
     </aiq-answer>
-  </aiq-question>
+  </aiq-question-li>
   <br>
-  <aiq-question>How do you define a wildcard state?
+  <aiq-question-li>How do you define a wildcard state?
     <aiq-answer>
       <ul class="list-group md-2">
-        <li class="list-group-item" *ngFor="let hero of heroes" [@heroWildcardState]="hero.state" (click)="hero.toggleState()">
+        <li class="list-group-item" *ngFor="let hero of heroes" [@heroWildcardState]="hero.state"
+          (click)="hero.toggleState()">
           {{hero.name}}: {{hero.state}}
         </li>
       </ul>
     </aiq-answer>
-  </aiq-question>
+  </aiq-question-li>
 </ul>

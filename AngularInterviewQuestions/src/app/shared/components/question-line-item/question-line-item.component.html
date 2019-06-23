@@ -5,31 +5,31 @@
 </style>
 
 
-<li [class.unanswered]="unanswered">{{questionAndAnswer.question}}
+<li [class.unanswered]="unanswered">{{qna.question.Text}}
 
   <div id="answer">
 
-    <div id="codeSnippet" *ngIf="questionAndAnswer.codeSnippet" class="card border-secondary mb-3">
+    <div id="codeSnippet" *ngIf="qna.question.Code" class="card border-secondary mb-3">
       <div class="card-header" style=" padding-top: 0px; padding-bottom: 0px; ">
         <strong>*.ts</strong>
       </div>
       <div class="card-body">
         <pre style="margin: 0px;">
           <code style="margin: 0px;">
-{{questionAndAnswer.codeSnippet}}
+{{qna.question.Code}}
           </code>
         </pre>
       </div>
     </div>
 
-    <div id="htmlSnippet" *ngIf="questionAndAnswer.htmlSnippet" class="card border-secondary mb-3" style="margin-top: 4px;">
+    <div id="htmlSnippet" *ngIf="qna.question.Code" class="card border-secondary mb-3" style="margin-top: 4px;">
       <div class="card-header" style=" padding-top: 5px; padding-bottom: 0px; ">
         <strong>*.html</strong>
       </div>
       <div class="card-body" style=" padding-top: 0px; padding-bottom: 0px; ">
         <pre style="margin: 0px; padding: 0px;">
           <code style="margin: 0px; padding: 0px;">
-{{questionAndAnswer.htmlSnippet}}
+{{qna.question.Code}}
           </code>
         </pre>
       </div>

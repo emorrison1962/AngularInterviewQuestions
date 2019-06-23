@@ -1,0 +1,711 @@
+{
+    "questions": [
+        {
+            "Text": "What did you learn about Angular yesterday/this week?",
+            "Category": "General",
+            "Code": []
+        },
+        {
+            "Text": "What are some of the reasons you would choose to use Angular in your project?",
+            "Category": "General",
+            "Code": []
+        },
+        {
+            "Text": "What did you like about working with Angular?",
+            "Category": "General",
+            "Code": []
+        },
+        {
+            "Text": "How do you keep your Angular code more readable and maintainable?",
+            "Category": "General",
+            "Code": []
+        },
+        {
+            "Text": "What does testable code mean to you in context of Angular?",
+            "Category": "General",
+            "Code": []
+        },
+        {
+            "Text": "What does reusable code mean to you in context of Angular?",
+            "Category": "General",
+            "Code": []
+        },
+        {
+            "Text": "How do you define transition between two states in Angular?",
+            "Category": "Animations",
+            "Code": []
+        },
+        {
+            "Text": "How do you define a wildcard state?",
+            "Category": "Animations",
+            "Code": []
+        },
+        {
+            "Text": "What is a good use case for ngrx/store?",
+            "Category": "Architecture",
+            "Code": []
+        },
+        {
+            "Text": "What is a good use case for ngrx/entity?",
+            "Category": "Architecture",
+            "Code": []
+        },
+        {
+            "Text": "Can you talk about a bug related to a race condition, how to solve it and how to test it?",
+            "Category": "Architecture",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?",
+            "Category": "Architecture",
+            "Code": []
+        },
+        {
+            "Text": "What does this code do:",
+            "Category": "API",
+            "Code": [
+                "@HostBinding('class.valid') isValid;",
+                "<div *ngIf='someObservableData | async as data; else loading'>{{data}}</div>\r\n\r\n<ng-template #loading>\r\nLoading Data...\r\n</ng-template>"
+            ]
+        },
+        {
+            "Text": "Why would you use renderer methods instead of using native element methods?",
+            "Category": "API",
+            "Code": []
+        },
+        {
+            "Text": "How would you control size of an element on resize of the window in a component?",
+            "Category": "API",
+            "Code": []
+        },
+        {
+            "Text": "What would be a good use for NgZone service?",
+            "Category": "API",
+            "Code": []
+        },
+        {
+            "Text": "What are the bootstrap options for NgZone? Why would you use them? (Angular 5+)",
+            "Category": "API",
+            "Code": []
+        },
+        {
+            "Text": "How would you protect a component being activated through the router?",
+            "Category": "API",
+            "Code": []
+        },
+        {
+            "Text": "How would you insert an embedded view from a prepared TemplateRef?",
+            "Category": "API",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between @ViewChild() and @ContentChild()",
+            "Category": "API",
+            "Code": []
+        },
+        {
+            "Text": "How can you add an active class to a selected element in a list component?",
+            "Category": "Template Syntax",
+            "Code": []
+        },
+        {
+            "Text": "What is a template variable. How would you use it?",
+            "Category": "Template Syntax",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference of using a property binding verses a function binding on a template?",
+            "Category": "Template Syntax",
+            "Code": []
+        },
+        {
+            "Text": "What happens if you subscribe to a data source multiple times with async pipe?",
+            "Category": "Template Syntax",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between ng-content, ng-container and ng- template?",
+            "Category": "Template Syntax",
+            "Code": []
+        },
+        {
+            "Text": "When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?",
+            "Category": "Template Syntax",
+            "Code": []
+        },
+        {
+            "Text": "When can you omit the brackets in template binding?",
+            "Category": "Template Syntax",
+            "Code": []
+        },
+        {
+            "Text": "What is the minimum definition of a component?",
+            "Category": "Component",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between a component and a directive?",
+            "Category": "Component",
+            "Code": []
+        },
+        {
+            "Text": "How do components communicate with each other?",
+            "Category": "Component",
+            "Code": []
+        },
+        {
+            "Text": "How do you create two way data binding in Angular?",
+            "Category": "Component",
+            "Code": []
+        },
+        {
+            "Text": "How would you create a component to display error messages throughout your application?",
+            "Category": "Component",
+            "Code": []
+        },
+        {
+            "Text": "What does a lean component mean to you?",
+            "Category": "Component",
+            "Code": []
+        },
+        {
+            "Text": "How would you pass data from a parent component to a child component?",
+            "Category": "Component Interaction &amp; State Management",
+            "Code": []
+        },
+        {
+            "Text": "How would you pass data from a child component to a parent component?",
+            "Category": "Component Interaction &amp; State Management",
+            "Code": []
+        },
+        {
+            "Text": "Which components will be notified when an event is emitted?",
+            "Category": "Component Interaction &amp; State Management",
+            "Code": []
+        },
+        {
+            "Text": "Tell me about the different ways how you would get data to your components from a service and talk about why would you use one way vs the other?",
+            "Category": "Component Interaction &amp; State Management",
+            "Code": []
+        },
+        {
+            "Text": "How would you use cached data?",
+            "Category": "Component Interaction &amp; State Management",
+            "Code": []
+        },
+        {
+            "Text": "When do you use template driven vs model driven forms? Why?",
+            "Category": "Forms",
+            "Code": []
+        },
+        {
+            "Text": "How do you submit a form?",
+            "Category": "Forms",
+            "Code": []
+        },
+        {
+            "Text": "What's the difference between NgForm, FormGroup, and FormControl? How do they work together?",
+            "Category": "Forms",
+            "Code": []
+        },
+        {
+            "Text": "What's the advantage of using FormBuilder?",
+            "Category": "Forms",
+            "Code": []
+        },
+        {
+            "Text": "How do you add form validation to a form built with FormBuilder?",
+            "Category": "Forms",
+            "Code": []
+        },
+        {
+            "Text": "What's the difference between dirty, touched, and pristine on a form element?",
+            "Category": "Forms",
+            "Code": []
+        },
+        {
+            "Text": "How can you access validation errors in the template to display error messages?",
+            "Category": "Forms",
+            "Code": []
+        },
+        {
+            "Text": "What is async validation and how is it done?",
+            "Category": "Forms",
+            "Code": []
+        },
+        {
+            "Text": "What is the purpose of NgModule?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "How do you decide to create a new NgModule?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "What are the attributes that you can define in an NgModule annotation?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between a module's forRoot() and forChild() methods and why do you need it?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "What would you have in a shared module?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "What would you not put shared module?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "What module would you put a singleton service whose instance will be shared throughout the application (e.g. ExceptionService andLoggerService)?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "What is the purpose of exports in a NgModule?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between exports and declarations in NgModule?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "Why is it bad if SharedModule provides a service to a lazy loaded module?",
+            "Category": "NgModules",
+            "Code": []
+        },
+        {
+            "Text": "What is the use case of services?",
+            "Category": "Services",
+            "Code": []
+        },
+        {
+            "Text": "How are the services injected to your application?",
+            "Category": "Services",
+            "Code": []
+        },
+        {
+            "Text": "How do you unit test a service with a dependency?",
+            "Category": "Services",
+            "Code": []
+        },
+        {
+            "Text": "Why is it a bad idea to create a new service in a component like the one below?",
+            "Category": "Services",
+            "Code": [
+                "let service = new DataService();"
+            ]
+        },
+        {
+            "Text": "What is a structural directive?",
+            "Category": "Structural Directives",
+            "Code": []
+        },
+        {
+            "Text": "How do you identify a structural directive in html?",
+            "Category": "Structural Directives",
+            "Code": []
+        },
+        {
+            "Text": "When creating your own structural directives, how would you decide on hiding or removing an element? What would be the advantages or disadvantages of choosing one method rather than the other?",
+            "Category": "Structural Directives",
+            "Code": []
+        },
+        {
+            "Text": "What are some of the Angular Style Guide suggestions you follow on your code? Why?",
+            "Category": "Style Guide",
+            "Code": []
+        },
+        {
+            "Text": "Is it important to have a style guide? Why/not?",
+            "Category": "Style Guide",
+            "Code": []
+        },
+        {
+            "Text": "How would you select a custom component to style it.",
+            "Category": "Styling",
+            "Code": []
+        },
+        {
+            "Text": "What pseudo-class selector targets styles in the element that hosts the component?",
+            "Category": "Styling",
+            "Code": []
+        },
+        {
+            "Text": "How would you select all the child components' elements?",
+            "Category": "Styling",
+            "Code": []
+        },
+        {
+            "Text": "How would you select a css class in any ancestor of the component host element, all the way up to the document root?",
+            "Category": "Styling",
+            "Code": []
+        },
+        {
+            "Text": "What selector force a style down through the child component tree into all the child component views?",
+            "Category": "Styling",
+            "Code": []
+        },
+        {
+            "Text": "What does :host-context() pseudo-class selector targets?",
+            "Category": "Styling",
+            "Code": []
+        },
+        {
+            "Text": "What does the following css do?",
+            "Category": "Styling",
+            "Code": [
+                ":host-context(.theme-light) h2 {\r\n            background-color: red;\r\n}"
+            ]
+        },
+        {
+            "Text": "What is the possible order of lifecycle hooks.",
+            "Category": "Lifecycle Hooks",
+            "Code": []
+        },
+        {
+            "Text": "When will ngOnInit be called?",
+            "Category": "Lifecycle Hooks",
+            "Code": []
+        },
+        {
+            "Text": "How would you make use of ngOnInit()?",
+            "Category": "Lifecycle Hooks",
+            "Code": []
+        },
+        {
+            "Text": "What would you consider a thing you should be careful doing on ngOnInit()?",
+            "Category": "Lifecycle Hooks",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between ngOnInit() and constructor() of a component?",
+            "Category": "Lifecycle Hooks",
+            "Code": []
+        },
+        {
+            "Text": "What is a good use case for ngOnChanges()?",
+            "Category": "Lifecycle Hooks",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between an observable and a promise?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between an observable and a subject?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "What are some of the angular apis that are using observables?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "How would you cache an observable data?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "How would you implement a multiple api calls that needs to happen in order using rxjs?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between switchMap, concatMap and mergeMap?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "How would you make sure an api call that needs to be called only once but with multiple conditions. Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "How would you implement a brush behavior using rxjs?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "How would you implement a color picker with rxjs?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons).",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between scan() vs reduce() ?",
+            "Category": "Observables RxJS",
+            "Code": []
+        },
+        {
+            "Text": "What are some of the things that you pay attention to, to make sure your angular application is performant?",
+            "Category": "Performance",
+            "Code": []
+        },
+        {
+            "Text": "What tools would you use to find a performance issue in your code?",
+            "Category": "Performance",
+            "Code": []
+        },
+        {
+            "Text": "What tools have you used to improve the performance of your application?",
+            "Category": "Performance",
+            "Code": []
+        },
+        {
+            "Text": "What are some ways you may improve your website's scrolling performance?",
+            "Category": "Performance",
+            "Code": []
+        },
+        {
+            "Text": "Explain the difference between layout, painting and compositing.",
+            "Category": "Performance",
+            "Code": []
+        },
+        {
+            "Text": "Have you seen Jeff Cross's NgCruise talk on performance?",
+            "Category": "Performance",
+            "Code": []
+        },
+        {
+            "Text": "What is a pure pipe?",
+            "Category": "Pipes",
+            "Code": []
+        },
+        {
+            "Text": "What is an async pipe?",
+            "Category": "Pipes",
+            "Code": []
+        },
+        {
+            "Text": "What kind of data can be used with async pipe?",
+            "Category": "Pipes",
+            "Code": []
+        },
+        {
+            "Text": "How do you create a custom pipe?",
+            "Category": "Pipes",
+            "Code": []
+        },
+        {
+            "Text": "How does async pipe prevents memory leeks?",
+            "Category": "Pipes",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between pure and impure pipes?",
+            "Category": "Pipes",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between RouterModule.forRoot() vs RouterModule.forChild()?  Why is it important?",
+            "Category": "Router",
+            "Code": []
+        },
+        {
+            "Text": "How does loadChildren property work?",
+            "Category": "Router",
+            "Code": []
+        },
+        {
+            "Text": "Do you need a Routing Module? Why/not?",
+            "Category": "Router",
+            "Code": []
+        },
+        {
+            "Text": "When does a lazy loaded module is loaded?",
+            "Category": "Router",
+            "Code": []
+        },
+        {
+            "Text": "Below link doesn't work. Why? How do I fix it?",
+            "Category": "Router",
+            "Code": [
+                "<div routerLink='product.id'></div>"
+            ]
+        },
+        {
+            "Text": "Can you explain the difference between ActivatedRoute and RouterState?",
+            "Category": "Router",
+            "Code": []
+        },
+        {
+            "Text": "How do you debug router?",
+            "Category": "Router",
+            "Code": []
+        },
+        {
+            "Text": "Why do we need route guards?",
+            "Category": "Router",
+            "Code": []
+        },
+        {
+            "Text": "What is a RouterOutlet?",
+            "Category": "Router",
+            "Code": []
+        },
+        {
+            "Text": "What are some of the different tests types you can write?",
+            "Category": "Testing",
+            "Code": []
+        },
+        {
+            "Text": "How do you mock a service to inject in an integration test?",
+            "Category": "Testing",
+            "Code": []
+        },
+        {
+            "Text": "How do you mock a module in an integration test?",
+            "Category": "Testing",
+            "Code": []
+        },
+        {
+            "Text": "How do you test a component that has a dependency to an async service?",
+            "Category": "Testing",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between 'async()' and 'fakeAsync()'?",
+            "Category": "Testing",
+            "Code": []
+        },
+        {
+            "Text": "Why do you need type definitions?",
+            "Category": "TypeScript",
+            "Code": []
+        },
+        {
+            "Text": "How would you define a custom type?",
+            "Category": "TypeScript",
+            "Code": []
+        },
+        {
+            "Text": "What is the difference between an Interface and a Class?",
+            "Category": "TypeScript",
+            "Code": []
+        },
+        {
+            "Text": "First line below gives compile error, second line doesn't. Why?",
+            "Category": "TypeScript",
+            "Code": [
+                "someService.someMethod(x);\r\nsomeService['someMethod'](x);"
+            ]
+        },
+        {
+            "Text": "What are Discriminated union types?",
+            "Category": "TypeScript",
+            "Code": []
+        },
+        {
+            "Text": "How do you define Object of Objects type in typescript?",
+            "Category": "TypeScript",
+            "Code": []
+        },
+        {
+            "Text": "How can you capture the 'type' the user provides (e.g. number), so that we can use that information later.",
+            "Category": "TypeScript",
+            "Code": []
+        },
+        {
+            "Text": "Explain the difference between var, let and const key words.",
+            "Category": "JavaScript",
+            "Code": []
+        },
+        {
+            "Text": "Could you make sure a const value is garbage collected?",
+            "Category": "JavaScript",
+            "Code": []
+        },
+        {
+            "Text": "Explain Object.assign and possible use cases.",
+            "Category": "JavaScript",
+            "Code": []
+        },
+        {
+            "Text": "Explain Object.freeze and possible use cases.",
+            "Category": "JavaScript",
+            "Code": []
+        },
+        {
+            "Text": "Explain the code below. How many times the createVal function is called?",
+            "Category": "JavaScript",
+            "Code": [
+                "function createVal(){\r\n            return Math.random();\r\n};\r\n\r\nfunction fun( val =  createVal()){\r\n            // Do something with val...\r\n}\r\n\r\nfun();\r\nfun(5);\r\n"
+            ]
+        },
+        {
+            "Text": "What is the spread operator doing in this function call? Seriously!",
+            "Category": "JavaScript",
+            "Code": [
+                "doStuff(...args);\r\n"
+            ]
+        },
+        {
+            "Text": "What would these components render?",
+            "Category": "Coding",
+            "Code": [
+                "import { Component, ContentChildren, Directive, Input, QueryList } from '@angular/core';\r\n\r\n@Directive({selector: 'pane'})\r\nexport class Pane {\r\n@Input() id: string;\r\n}\r\n\r\n@Component({\r\nselector: 'tab',\r\ntemplate: `\r\n    <div>panes: {{serializedPanes}}</div>\r\n  `\r\n})\r\nexport class Tab {\r\n@ContentChildren(Pane) panes: QueryList<Pane>;\r\n            get serializedPanes(): string { return this.panes ? this.panes.map(p => p.id).join(', ') : ''; }\r\n}\r\n\r\n@Component({\r\nselector: 'example-app',\r\ntemplate: `\r\n    <tab>\r\n      <pane id=\"1\"></pane>\r\n      <pane id=\"2\"></pane>\r\n      <pane id=\"3\" *ngIf=\"shouldShow\"></pane>\r\n    </tab>\r\n    <button (click)=\"show()\">Show 3</button>\r\n  `,\r\n})\r\nexport class ContentChildrenComp {\r\nshouldShow = false;\r\nshow() { this.shouldShow = true; }\r\n}"
+            ]
+        },
+        {
+            "Text": "What's a cool project that you've recently worked on?",
+            "Category": "Fun",
+            "Code": []
+        },
+        {
+            "Text": "What are some things you like about the developer tools you use?",
+            "Category": "Fun",
+            "Code": []
+        },
+        {
+            "Text": "Who inspires you in the angular community?",
+            "Category": "Fun",
+            "Code": []
+        },
+        {
+            "Text": "Do you have any pet projects? What kind?",
+            "Category": "Fun",
+            "Code": []
+        },
+        {
+            "Text": "How did you design the architecture of your project?",
+            "Category": "Fun",
+            "Code": []
+        },
+        {
+            "Text": "What's your favorite feature of Angular?",
+            "Category": "Fun",
+            "Code": []
+        },
+        {
+            "Text": "What is your least favorite thing about Angular? (Please share your thoughts by making a pull request to angularFeelings)",
+            "Category": "Fun",
+            "Code": []
+        },
+        {
+            "Text": "How do you like your coffee?",
+            "Category": "Fun",
+            "Code": []
+        },
+        {
+            "Text": "If you could decide on a new feature for angular, what would it be?",
+            "Category": "Fun",
+            "Code": []
+        }
+    ]
+}

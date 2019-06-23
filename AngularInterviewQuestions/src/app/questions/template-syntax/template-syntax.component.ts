@@ -18,8 +18,6 @@ export class TemplateSyntaxComponent implements OnInit, OnDestroy {
   numbersObserver: any;
   MAX: number = 5;
 
-  q1: QuestionAndAnswer = new QuestionAndAnswer();
-  lyrics: string;
 
   format(str: string) {
     var before = str.length;
@@ -41,14 +39,6 @@ export class TemplateSyntaxComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.numbersObserver = this.svc.getNumbers().subscribe(val => this.onObservableChanged(val));
-
-    this.q1.question = "What is a template reference variable. How would you use it?";
-    this.q1.htmlSnippet = `
-<input (change)="true" (keyup)="0" (select)="0" #textInput type="text">
-<label> Template Reference Varible: {{textInput.value}}</label>	
-`;
-    console.log(this.q1.htmlSnippet);
-
   }
 
   ngOnDestroy(): void {

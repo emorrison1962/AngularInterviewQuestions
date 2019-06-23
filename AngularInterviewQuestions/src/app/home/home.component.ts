@@ -1,3 +1,5 @@
+import { Question } from './../shared/models/question';
+import { QuestionService } from './../shared/services/question.service';
 import { Component, OnInit } from '@angular/core';
 import { TocItem } from '../shared/models/toc-item';
 
@@ -7,6 +9,10 @@ import { TocItem } from '../shared/models/toc-item';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+
+  devLink = new TocItem("stub", "*** Dev Stub ***");
+
 
   tocItems =
     [new TocItem("animations-questions", "Animations Questions"),
@@ -34,10 +40,15 @@ export class HomeComponent implements OnInit {
     new TocItem("lifecycle", "Lifecycle Hooks Questions"),
     new TocItem("security", "Security Questions")];
 
+  questions: Array<Question>;
 
-  constructor() { }
+
+  constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
+
+    this.questions = this.questionService.getQuestions();
+
     this.tocItems.sort((a: TocItem, b: TocItem) => {
       if (a.category < b.category) return -1;
       if (a.category > b.category) return 1;

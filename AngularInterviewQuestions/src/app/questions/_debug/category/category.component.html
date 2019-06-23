@@ -1,0 +1,9 @@
+<h4>**************************************************************</h4>
+
+
+<ul>
+  <li *ngFor="let qna of questionsAndAnswers">
+    <aiq-question-li [qna]="qna"></aiq-question-li>
+    {{qna.question.Text}}
+  </li>
+</ul>

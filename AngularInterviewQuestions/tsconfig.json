@@ -16,9 +16,16 @@
       "es2017",
       "dom"
     ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
-      "core-js/es7/reflect": ["./node_modules/core-js/proposals/reflect-metadata"],
-      "core-js/es6/*": ["./node_modules/core-js/es/*"]
+      "core-js/es7/reflect": [
+        "./node_modules/core-js/proposals/reflect-metadata"
+      ],
+      "core-js/es6/*": [
+        "./node_modules/core-js/es/*"
+      ]
     }
   }
 }

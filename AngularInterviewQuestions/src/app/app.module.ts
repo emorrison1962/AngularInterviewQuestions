@@ -1,3 +1,5 @@
+import { CategoryComponent } from './questions/_debug/category/category.component';
+import { QuestionService } from './shared/services/question.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -37,6 +39,7 @@ import { AnswerComponent } from 'src/app/shared/components/answer/answer.compone
 import { CodeSnippetComponent } from 'src/app/shared/components/code-snippet/code-snippet.component';
 import { ExampleComponent } from './shared/components/example/example.component';
 import { StubService } from './shared/services/stub.service';
+import { QuestionAndAnswerComponent } from './shared/components/question-and-answer/question-and-answer.component';
 
 
 const ROUTES: Routes = [
@@ -68,7 +71,8 @@ const ROUTES: Routes = [
   { path: 'coding-questions', component: CodingComponent },
   { path: 'fun-questions', component: FunComponent },
   { path: 'lifecycle', component: LifecycleComponent },
-  { path: 'security', component: SecurityComponent }
+  { path: 'security', component: SecurityComponent },
+  { path: 'stub', component: CategoryComponent }
 ];
 
 
@@ -107,7 +111,8 @@ const ROUTES: Routes = [
     AnswerComponent,
     CodeSnippetComponent,
     ExampleComponent,
-
+    CategoryComponent,
+    QuestionAndAnswerComponent,
   ],
   imports: [
     BrowserModule,
@@ -115,7 +120,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     FormsModule
   ],
-  providers: [StubService],
+  providers: [StubService, QuestionService],
   bootstrap: [
     AppComponent
   ]

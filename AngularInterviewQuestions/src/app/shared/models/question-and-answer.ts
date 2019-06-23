@@ -1,49 +1,51 @@
+import { Question, Answer } from './question';
+
 export class QuestionAndAnswer {
-
     //#region Properties
-    get question(): string {
-        return this._question;
-    }
-    set question(input: string) {
-        this._question = input.trim();
-    }
+    // get questionText(): string {
+    //     return this.question.Text;
+    // }
 
-    get answer(): string {
-        return this._answer;
-    }
-    set answer(input: string) {
-        this._answer = input.trim();
-    }
-    get htmlSnippet(): string {
-        return this._htmlSnippet;
-    }
-    set htmlSnippet(input: string) {
-        this._htmlSnippet = input.trim();
-    }
-    get codeSnippet(): string {
-        return this._codeSnippet;
-    }
-    set codeSnippet(input: string) {
-        this._codeSnippet = input.trim();
-    }
+    // get questionCode(): string {
+    //     return this.question.Code.join("\r\n");
+    // }
+
+
+
+
+    // get answer(): string {
+    //     return this._answer;
+    // }
+    // set answer(input: string) {
+    //     this._answer = input.trim();
+    // }
+    // get htmlSnippet(): string {
+    //     return this._htmlSnippet;
+    // }
+    // set htmlSnippet(input: string) {
+    //     this._htmlSnippet = input.trim();
+    // }
+    // get codeSnippet(): string {
+    //     return this._codeSnippet;
+    // }
+    // set codeSnippet(input: string) {
+    //     this._codeSnippet = input.trim();
+    // }
 
     get isNotAnswered(): boolean {
         var result = false;
-        if (null == this.htmlSnippet
-            && null == this.codeSnippet
-            && null == this.answer) {
-            result = true;
-        }
+        // if (null == this.htmlSnippet
+        //     && null == this.codeSnippet
+        //     && null == this.answer) {
+        //     result = true;
+        // }
         return result;
     }
 
     //#endregion Properties
 
     //#region Construction
-    constructor(private _question: string = null,
-        private _answer: string = null,
-        private _htmlSnippet: string = null,
-        private _codeSnippet: string = null) {
+    constructor(public question: Question = null, public answer: Answer = null) {
     }
     //#endregion 
 
