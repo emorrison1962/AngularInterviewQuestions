@@ -34,7 +34,7 @@ import { SecurityComponent } from './questions/security/security.component';
 import { HomeComponent } from './home/home.component';
 import { QuestionDirective } from './shared/directives/question.directive';
 import { AnswerDirective } from './shared/directives/answer.directive';
-import { QuestionLineItemComponent } from './shared/components/question-line-item/question-line-item.component';
+import { QuestionComponent } from './shared/components/question/question.component';
 import { AnswerComponent } from 'src/app/shared/components/answer/answer.component';
 import { CodeSnippetComponent } from 'src/app/shared/components/code-snippet/code-snippet.component';
 import { ExampleComponent } from './shared/components/example/example.component';
@@ -108,7 +108,7 @@ const ROUTES: Routes = [
     HomeComponent,
     QuestionDirective,
     AnswerDirective,
-    QuestionLineItemComponent,
+    QuestionComponent,
     AnswerComponent,
     CodeSnippetComponent,
     ExampleComponent,
