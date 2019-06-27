@@ -1,0 +1,6 @@
+C:\Dev\AngularInterviewQuestions\AngularInterviewQuestions.Models\bin\Debug\AngularInterviewQuestions.Models.dll
+C:\Dev\AngularInterviewQuestions\AngularInterviewQuestions.Models\bin\Debug\AngularInterviewQuestions.Models.pdb
+C:\Dev\AngularInterviewQuestions\AngularInterviewQuestions.Models\obj\Debug\AngularInterviewQuestions.Models.csprojAssemblyReference.cache
+C:\Dev\AngularInterviewQuestions\AngularInterviewQuestions.Models\obj\Debug\AngularInterviewQuestions.Models.csproj.CoreCompileInputs.cache
+C:\Dev\AngularInterviewQuestions\AngularInterviewQuestions.Models\obj\Debug\AngularInterviewQuestions.Models.dll
+C:\Dev\AngularInterviewQuestions\AngularInterviewQuestions.Models\obj\Debug\AngularInterviewQuestions.Models.pdb
