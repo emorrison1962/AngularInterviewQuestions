@@ -40,6 +40,7 @@ import { CodeSnippetComponent } from 'src/app/shared/components/code-snippet/cod
 import { ExampleComponent } from './shared/components/example/example.component';
 import { StubService } from './shared/services/stub.service';
 import { QuestionAndAnswerComponent } from './shared/components/question-and-answer/question-and-answer.component';
+import { CodeSnippetsComponent } from './shared/components/code-snippets/code-snippets.component';
 
 
 const ROUTES: Routes = [
@@ -113,6 +114,7 @@ const ROUTES: Routes = [
     ExampleComponent,
     CategoryComponent,
     QuestionAndAnswerComponent,
+    CodeSnippetsComponent
   ],
   imports: [
     BrowserModule,

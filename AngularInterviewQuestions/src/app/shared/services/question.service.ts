@@ -13,7 +13,7 @@ export class QuestionService {
   constructor() { }
 
   public getQuestions(): Array<Question> {
-    let result: Array<Question> = questionsJson.questions.map(blob => { return Question.fromJson(blob) });
+    let result: Array<Question> = questionsJson.map(blob => { return Question.fromJson(blob) });
     return result;
   }
 }

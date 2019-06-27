@@ -18,14 +18,14 @@ export class QuestionLineItemComponent implements OnInit, AfterContentInit {
   question: Question;
 
   @Input()
-  get qna(): QuestionAndAnswer {
-    return this._qna;
-  }
-
   set qna(value: QuestionAndAnswer) {
     this.question = value.question;
     this._qna = value;
   }
+  get qna(): QuestionAndAnswer {
+    return this._qna;
+  }
+
 
 
   constructor() { }
@@ -33,14 +33,14 @@ export class QuestionLineItemComponent implements OnInit, AfterContentInit {
   ngOnInit() {
     new Object();
     this.unanswered = this.qna.isNotAnswered;
-    console.log(this.qna.question.Text);
+    //console.log(this.qna.question.Text);
     new Object();
   }
 
 
   ngAfterContentInit() {
     if (0 === this.answers.length) {
-      //this.unanswered = true;
+      //this.unanswered = false;
     }
   }
 

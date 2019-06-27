@@ -15,12 +15,45 @@
 
 
 
+export interface ICodeSnippets {
+
+    TypeScriptSnippet: string
+    CssSnippet: string
+    HtmlSnippet: string
+    HasSnippets: boolean
+}
+
+export class CodeSnippets implements ICodeSnippets {
+
+    TypeScriptSnippet: string = null;
+    CssSnippet: string = null;
+    HtmlSnippet: string = null;
+    HasSnippets: boolean = null !== this.TypeScriptSnippet || null !== this.CssSnippet || null !== this.HtmlSnippet;
+
+    constructor(src?: ICodeSnippets) {
+        if (src) {
+            this.TypeScriptSnippet = src.TypeScriptSnippet;
+            this.CssSnippet = src.CssSnippet;
+            this.HtmlSnippet = src.HtmlSnippet;
+            this.HasSnippets = src.HasSnippets;
+        }
+    }
+
+    static fromJson(data: any): CodeSnippets {
+        let result = new CodeSnippets();
+        Object.assign(result, data);
+        return result;
+    }
+
+}
+
+
 export interface IQuestion {
 
     QuestionId: number
     Text: string
     Category: string
-    Code: string[]
+    Snippets: CodeSnippets
 }
 
 export class Question implements IQuestion {
@@ -28,14 +61,14 @@ export class Question implements IQuestion {
     QuestionId: number = 0;
     Text: string = null;
     Category: string = null;
-    Code: string[] = [];
+    public Snippets: CodeSnippets = null;
 
     constructor(src?: IQuestion) {
         if (src) {
             this.QuestionId = src.QuestionId;
             this.Text = src.Text;
             this.Category = src.Category;
-            this.Code = src.Code;
+            this.Snippets = src.Snippets;
         }
     }
 
@@ -47,30 +80,28 @@ export class Question implements IQuestion {
 
 }
 
+
 export interface IAnswer {
 
     AnsweerId: number
     QuestionId: number
+    Snippets: CodeSnippets
     Text: string
-    Html: string
-    TypeScript: string
 }
 
 export class Answer implements IAnswer {
 
     AnsweerId: number = 0;
     QuestionId: number = 0;
+    Snippets: CodeSnippets = null;
     Text: string = null;
-    Html: string = null;
-    TypeScript: string = null;
 
     constructor(src?: IAnswer) {
         if (src) {
             this.AnsweerId = src.AnsweerId;
             this.QuestionId = src.QuestionId;
+            this.Snippets = src.Snippets;
             this.Text = src.Text;
-            this.Html = src.Html;
-            this.TypeScript = src.TypeScript;
         }
     }
 

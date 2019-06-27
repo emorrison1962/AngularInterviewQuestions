@@ -33,12 +33,10 @@ export class QuestionAndAnswer {
     // }
 
     get isNotAnswered(): boolean {
-        var result = false;
-        // if (null == this.htmlSnippet
-        //     && null == this.codeSnippet
-        //     && null == this.answer) {
-        //     result = true;
-        // }
+        var result = true;
+        if (null != this.answer && this.answer.Text.length > 0) {
+            result = false;
+        }
         return result;
     }
 

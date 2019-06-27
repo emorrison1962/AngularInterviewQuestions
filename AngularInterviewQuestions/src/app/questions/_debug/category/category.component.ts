@@ -1,6 +1,6 @@
 import { QuestionAndAnswer } from './../../../shared/models/question-and-answer';
 import { QuestionService } from './../../../shared/services/question.service';
-import { Question } from './../../../shared/models/question';
+import { Question, CodeSnippets } from './../../../shared/models/question';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,7 +16,9 @@ export class CategoryComponent implements OnInit {
   constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
-    this.questionsAndAnswers = this.questionService.getQuestions().map(q => { return new QuestionAndAnswer(q) });
+    this.questionsAndAnswers = this.questionService.getQuestions()
+      .map(q => { return new QuestionAndAnswer(q) })
+      .filter(q => { return q.question.Snippets.HasSnippets; });
     new Object();
   }
 

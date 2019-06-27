@@ -9,7 +9,7 @@ export class AnswerDirective {
 
     el.nativeElement.style.fontStyle = 'normal';
     el.nativeElement.style.color = 'blue';
-    console.log(typeof (el.nativeElement.style));
+    //console.log(typeof (el.nativeElement.style));
   }
 
 }

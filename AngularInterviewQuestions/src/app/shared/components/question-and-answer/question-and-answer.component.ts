@@ -13,7 +13,7 @@ export class QuestionAndAnswerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.question);
+    //console.log(this.question);
     new Object();
 
   }
