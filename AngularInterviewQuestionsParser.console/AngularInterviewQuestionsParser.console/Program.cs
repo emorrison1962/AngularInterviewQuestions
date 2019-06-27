@@ -18,26 +18,16 @@ namespace AngularInterviewQuestionsParser.console
         {
             var p = new Parser();
 
-            var categories= p.Parse(Resource.Angular_Interview_Questions);
-            foreach (var c in categories)
+            var questions= p.Parse(Resource.Angular_Interview_Questions);
+            foreach (var q in questions)
             {
-                Debug.WriteLine($"{c.Name}:");
-                Debug.Indent();
-                foreach (var q in c.Questions)
-                {
-                    Debug.WriteLine($"{q.Text}");
-                    foreach (var code in q.Code)
-                    {
-                        Debug.WriteLine($"\r\n\t{code}");
-                    }
-                }
-                Debug.Unindent();
+                //Debug.WriteLine($"{q}");
             }
-            new object();
 
-            var json = Newtonsoft.Json.JsonConvert.SerializeObject(categories);
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(questions, Newtonsoft.Json.Formatting.Indented);
             Debug.WriteLine(json);
-        }
+			new object();
+		}
 
-    }//class
+	}//class
 }//ns
