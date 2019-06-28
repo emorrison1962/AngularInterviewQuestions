@@ -1,8 +1,9 @@
 import { QuestionAndAnswer } from './../../shared/models/question-and-answer';
-import { Observable } from "rxjs"
+import { Observable, Subscription } from "rxjs"
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterContentInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { StubService } from '../../shared/services/stub.service';
+import { AbstractControl } from '@angular/forms';
 
 
 @Component({
@@ -10,14 +11,15 @@ import { StubService } from '../../shared/services/stub.service';
   templateUrl: './template-syntax.component.html',
   styleUrls: ['./template-syntax.component.css']
 })
-export class TemplateSyntaxComponent implements OnInit, OnDestroy {
+export class TemplateSyntaxComponent implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild("textInput01", { static: true }) observedInput: AbstractControl;
 
   private _bound: string = "Bound Text.";
   _numbers = new Array<number>();
   _numbers$: Observable<Array<number>>;
-  numbersObserver: any;
+  numbersObserver: Subscription;
+  inputObserver: Subscription;
   MAX: number = 5;
-
 
   format(str: string) {
     var before = str.length;
@@ -34,15 +36,25 @@ export class TemplateSyntaxComponent implements OnInit, OnDestroy {
   }
 
   constructor(private svc: StubService) {
-
   }
 
   ngOnInit() {
     this.numbersObserver = this.svc.getNumbers().subscribe(val => this.onObservableChanged(val));
   }
 
+  observedStatus: any = null;
+  ngAfterViewInit(): void {
+    console.log(this.observedInput);
+    this.inputObserver = this.observedInput.statusChanges.subscribe(
+      status => {
+        this.observedStatus = status;
+      }
+    );
+  }
+
   ngOnDestroy(): void {
-    this.numbersObserver.unsubcribe();
+    this.numbersObserver.unsubscribe();
+    this.inputObserver.unsubscribe();
   }
 
   onObservableChanged(val: Array<number>) {

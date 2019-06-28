@@ -3,17 +3,17 @@
   </a>Template Syntax Questions:</h4>
 
 <ul>
-  <aiq-question [qna]="q1">
+  <div>
     <div class="col-3">
       <div class="card">
         <div class="card-header"><em>Used for validation:</em></div>
         <div class="card-body">
           <label>Input:
-            <input placeholder="Input text to clear error." class="form-control" [class.is-invalid]="textInput.invalid"
-              required (change)="true" (keyup)="0" (select)="0" [ngModel] name="textInput" #textInput="ngModel"
-              type="text">
+            <input placeholder="This text is required." class="form-control" [class.is-invalid]="textInput01.invalid"
+              required maxlength="100" minlength="3" (change)="true" (keyup)="0" (select)="0" [ngModel]
+              name="textInput01" #textInput01="ngModel" type="text">
           </label>
-          <div class="d-block invalid-feedback" *ngIf="textInput.invalid">Required</div>
+          <div class="d-block invalid-feedback" *ngIf="textInput01.invalid">Required</div>
         </div>
       </div>
     </div>
@@ -22,25 +22,25 @@
       <div class="card">
         <div class="card-header"><em>Observing the control:</em></div>
         <div class="card-body">
-          <label>Value:
-            <input class="form-control" [class.is-invalid]="textInput.invalid" [class.is-valid]="textInput.valid"
-              placeholder="Type Input to update." type="text" readonly disabled [ngModel]="textInput.value">
+          <label>Simply observing the <em>value</em> of the control:
+            <input class="form-control" [class.is-valid]="textInput01.valid"
+              placeholder="Modify required text to update." type="text" readonly disabled [ngModel]="textInput01.value">
           </label>
-          <label>State:
-            <input class="form-control" [class.is-invalid]="textInput.invalid" [class.is-valid]="textInput.valid"
-              placeholder="Type Input to update." type="text" readonly disabled [ngModel]="textInput.statusChanges">
+          <label>Simply observing the <em>state</em> of the control:
+            <input class="form-control" [class.is-invalid]="textInput01.invalid" [class.is-valid]="textInput01.valid"
+              placeholder="Modify required text to update." type="text" readonly disabled [ngModel]="observedStatus">
           </label>
         </div>
       </div>
     </div>
-  </aiq-question>
+  </div>
 
 
 
-  <aiq-question>How can you add an active class to a selected element in a list component?
-  </aiq-question>
+  <div>How can you add an active class to a selected element in a list component?
+  </div>
 
-  <aiq-question>What is a template reference variable. How would you use it?
+  <div>What is a template reference variable. How would you use it?
     <aiq-answer>
       <aiq-code-snippet header="*.html">
         <pre>
@@ -65,9 +65,9 @@
         </div>
       </aiq-example>
     </aiq-answer>
-  </aiq-question>
+  </div>
 
-  <aiq-question>What is the difference of using a property binding verses a function binding on a template?
+  <div>What is the difference of using a property binding verses a function binding on a template?
     <aiq-answer>
       <div class="card border-secondary mb-3">
         <div class="card-header">
@@ -131,9 +131,9 @@
         </div>
       </div>
     </aiq-answer>
-  </aiq-question>
+  </div>
 
-  <aiq-question>What happens if you subscribe to a data source multiple times with async pipe?
+  <div>What happens if you subscribe to a data source multiple times with async pipe?
     <aiq-answer>
       <aiq-example>
         <ul class="list-group">
@@ -141,14 +141,14 @@
         </ul>
       </aiq-example>
     </aiq-answer>
-  </aiq-question>
+  </div>
 
-  <aiq-question>What is the difference between ng-content, ng-container and ng-template?</aiq-question>
+  <div>What is the difference between ng-content, ng-container and ng-template?</div>
 
-  <aiq-question>When you create a data-binding in Angular, are you working with attributes or properties? What is
+  <div>When you create a data-binding in Angular, are you working with attributes or properties? What is
     the
-    difference anyway?</aiq-question>
+    difference anyway?</div>
 
-  <aiq-question>When can you omit the brackets in template binding?</aiq-question>
+  <div>When can you omit the brackets in template binding?</div>
 
 </ul>
