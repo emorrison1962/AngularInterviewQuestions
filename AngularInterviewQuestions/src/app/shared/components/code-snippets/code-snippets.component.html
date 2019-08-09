@@ -3,39 +3,35 @@
     <div class="card-header" style=" padding-top: 0px; padding-bottom: 0px; ">
       <strong>*.ts</strong>
     </div>
-    <div class="card-body">
-      <pre style="margin: 0px;">
-          <code style="margin: 0px;">
-{{snippets.TypeScriptSnippet}}
-          </code>
-        </pre>
+    <div *ngIf="isReadOnly" class="card-body">
+      <pre style="margin: 0px;"><code style="margin: 0px;">{{snippets.TypeScriptSnippet}}</code></pre>
     </div>
+    <aiq-code-snippet-textarea *ngIf="!isReadOnly" [(snippet)]="snippets.TypeScriptSnippet">
+    </aiq-code-snippet-textarea>
   </div>
 
   <div id="cssSnippet" *ngIf="snippets.CssSnippet" class="card border-secondary mb-3" style="margin-top: 4px;">
     <div class="card-header" style=" padding-top: 5px; padding-bottom: 0px; ">
       <strong>*.css</strong>
     </div>
-    <div class="card-body" style=" padding-top: 0px; padding-bottom: 0px; ">
-      <pre style="margin: 0px; padding: 0px;">
-              <code style="margin: 0px; padding: 0px;">
-    {{snippets.CssSnippet}}
-              </code>
-            </pre>
+    <div *ngIf="isReadOnly" class="card-body" style=" padding-top: 0px; padding-bottom: 0px; ">
+      <pre style="margin: 0px; padding: 0px;"
+        aiqStyleInspector><code style="margin: 0px; padding: 0px;">{{snippets.CssSnippet}}</code></pre>
     </div>
+    <aiq-code-snippet-textarea *ngIf="!isReadOnly" [(snippet)]="snippets.CssSnippet">
+    </aiq-code-snippet-textarea>
   </div>
 
   <div id="htmlSnippet" *ngIf="snippets.HtmlSnippet" class="card border-secondary mb-3" style="margin-top: 4px;">
     <div class="card-header" style=" padding-top: 5px; padding-bottom: 0px; ">
       <strong>*.html</strong>
     </div>
-    <div class="card-body" style=" padding-top: 0px; padding-bottom: 0px; ">
-      <pre style="margin: 0px; padding: 0px;">
-          <code style="margin: 0px; padding: 0px;">
-{{snippets.HtmlSnippet}}
-          </code>
-        </pre>
+    <div *ngIf="isReadOnly" class="card-body" style=" padding-top: 0px; padding-bottom: 0px; ">
+      <pre
+        style="margin: 0px; padding: 0px;"><code style="margin: 0px; padding: 0px;">{{snippets.HtmlSnippet}}</code></pre>
     </div>
+    <aiq-code-snippet-textarea *ngIf="!isReadOnly" [(snippet)]="snippets.HtmlSnippet">
+    </aiq-code-snippet-textarea>
   </div>
 
 

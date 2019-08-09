@@ -1,3 +1,4 @@
+import { CdkTextareaAutosize } from './shared/directives/cdk-textarea-autosive.directive';
 import { CategoryComponent } from './questions/_debug/category/category.component';
 import { QuestionService } from './shared/services/question.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -36,16 +37,19 @@ import { QuestionDirective } from './shared/directives/question.directive';
 import { AnswerDirective } from './shared/directives/answer.directive';
 import { QuestionComponent } from './shared/components/question/question.component';
 import { AnswerComponent } from 'src/app/shared/components/answer/answer.component';
-import { CodeSnippetComponent } from 'src/app/shared/components/code-snippet/code-snippet.component';
 import { ExampleComponent } from './shared/components/example/example.component';
 import { StubService } from './shared/services/stub.service';
-import { QuestionAndAnswerComponent } from './shared/components/question-and-answer/question-and-answer.component';
 import { CodeSnippetsComponent } from './shared/components/code-snippets/code-snippets.component';
+import { Obsolete_CodeSnippetComponent } from './shared/components/code-snippet-obsolete/code-snippet.component';
+import { CodeSnippetTextareaDirective } from './shared/directives/code-snippet-textarea.directive';
+import { CodeSnippetTextareaComponent } from './shared/components/code-snippet-textarea/code-snippet-textarea.component';
+import { StyleInspectorDirective } from './shared/directives/style-inspector.directive';
 
 
 const ROUTES: Routes = [
   {
-    path: '', redirectTo: '/home',
+    path: '', redirectTo: '/stub',
+    //path: '', redirectTo: '/home',
     pathMatch: 'full'
   },
   { path: 'home', component: HomeComponent },
@@ -108,13 +112,16 @@ const ROUTES: Routes = [
     HomeComponent,
     QuestionDirective,
     AnswerDirective,
+    CodeSnippetTextareaDirective,
     QuestionComponent,
     AnswerComponent,
-    CodeSnippetComponent,
     ExampleComponent,
     CategoryComponent,
-    QuestionAndAnswerComponent,
-    CodeSnippetsComponent
+    CodeSnippetsComponent,
+    Obsolete_CodeSnippetComponent,
+    CodeSnippetTextareaComponent,
+    CdkTextareaAutosize,
+    StyleInspectorDirective
   ],
   imports: [
     BrowserModule,

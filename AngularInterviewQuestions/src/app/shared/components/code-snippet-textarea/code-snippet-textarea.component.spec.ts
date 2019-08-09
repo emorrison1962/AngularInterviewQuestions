@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { CodeSnippetsComponent } from './code-snippets.component';
+import { CodeSnippetTextareaComponent } from './code-snippet-textarea.component';
 
-describe('CodeSnippetsComponent', () => {
-  let component: CodeSnippetsComponent;
-  let fixture: ComponentFixture<CodeSnippetsComponent>;
+describe('CodeSnippetTextareaComponent', () => {
+  let component: CodeSnippetTextareaComponent;
+  let fixture: ComponentFixture<CodeSnippetTextareaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CodeSnippetsComponent ]
+      declarations: [ CodeSnippetTextareaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CodeSnippetsComponent);
+    fixture = TestBed.createComponent(CodeSnippetTextareaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

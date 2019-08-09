@@ -1,50 +1,58 @@
-import { Question, Answer } from './question';
+// import { Question, Answer } from './question';
 
-export class QuestionAndAnswer {
-    //#region Properties
-    // get questionText(): string {
-    //     return this.question.Text;
-    // }
+// export class QuestionAndAnswer {
+//     //#region Properties
+//     // get questionText(): string {
+//     //     return this.question.Text;
+//     // }
 
-    // get questionCode(): string {
-    //     return this.question.Code.join("\r\n");
-    // }
-
-
+//     // get questionCode(): string {
+//     //     return this.question.Code.join("\r\n");
+//     // }
 
 
-    // get answer(): string {
-    //     return this._answer;
-    // }
-    // set answer(input: string) {
-    //     this._answer = input.trim();
-    // }
-    // get htmlSnippet(): string {
-    //     return this._htmlSnippet;
-    // }
-    // set htmlSnippet(input: string) {
-    //     this._htmlSnippet = input.trim();
-    // }
-    // get codeSnippet(): string {
-    //     return this._codeSnippet;
-    // }
-    // set codeSnippet(input: string) {
-    //     this._codeSnippet = input.trim();
-    // }
 
-    get isNotAnswered(): boolean {
-        var result = true;
-        if (null != this.answer && this.answer.Text.length > 0) {
-            result = false;
-        }
-        return result;
-    }
 
-    //#endregion Properties
+//     // get answer(): string {
+//     //     return this._answer;
+//     // }
+//     // set answer(input: string) {
+//     //     this._answer = input.trim();
+//     // }
+//     // get htmlSnippet(): string {
+//     //     return this._htmlSnippet;
+//     // }
+//     // set htmlSnippet(input: string) {
+//     //     this._htmlSnippet = input.trim();
+//     // }
+//     // get codeSnippet(): string {
+//     //     return this._codeSnippet;
+//     // }
+//     // set codeSnippet(input: string) {
+//     //     this._codeSnippet = input.trim();
+//     // }
 
-    //#region Construction
-    constructor(public question: Question = null, public answer: Answer = null) {
-    }
-    //#endregion 
+//     get isNotAnswered(): boolean {
+//         var result = true;
+//         if (null != this.answer && this.answer.Text.length > 0) {
+//             result = false;
+//         }
+//         return result;
+//     }
 
-}//class
+//     //#endregion Properties
+
+//     //#region Construction
+//     constructor(public question: Question = null, public answer: Answer = null) {
+//     }
+
+//     static fromJson(data: any): QuestionAndAnswer {
+//         let result = new QuestionAndAnswer();
+//         Object.assign(result, data);
+//         return result;
+//     }
+
+
+//     //#endregion 
+
+// }//class

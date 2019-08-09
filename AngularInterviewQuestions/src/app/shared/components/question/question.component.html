@@ -5,13 +5,17 @@
 </style>
 
 
-<li [class.unanswered]="unanswered" class="list-group-item list-group-item-secondary">{{qna.question.Text}}
+<div [class.unanswered]="unanswered" class="list-group-item list-group-item-secondary">
+  <h5>{{question.Text}}</h5>
+  <button *ngIf="isReadOnly" (click)="editClicked()" class="btn btn-primary">Edit</button>
+  <button *ngIf="!isReadOnly" (click)="cancelClicked()" class="btn btn-secondary">Cancel</button>
+  <button *ngIf="!isReadOnly" (click)="saveClicked()" class="btn btn-success">Save</button>
 
   <div id="question">
 
-    <aiq-code-snippets [snippets]="qna.question.Snippets"></aiq-code-snippets>
+    <aiq-code-snippets [snippets]="question.Snippets" [isReadOnly]="isReadOnly"></aiq-code-snippets>
 
-    <div *ngIf="false" id="result" class="card border-secondary mb-3">
+    <div *ngIf="true" id="result" class="card border-secondary mb-3">
       <div class="card-header">
         <strong>Result</strong>
       </div>
@@ -24,5 +28,11 @@
     </div>
 
   </div>
-</li>
+
+  <aiq-answer *ngFor="let answer of question.Answers" [answer]="answer">
+    test
+  </aiq-answer>
+
+
+</div>
 <br />

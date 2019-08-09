@@ -2,7 +2,5 @@
 
 
 <ul>
-  <!-- <li *ngFor="let qna of questionsAndAnswers" class="list-group-item"> -->
-  <aiq-question *ngFor="let qna of questionsAndAnswers" [qna]="qna"></aiq-question>
-  <!-- </li> -->
+  <aiq-question *ngFor="let question of questions" [question]="question"></aiq-question>
 </ul>

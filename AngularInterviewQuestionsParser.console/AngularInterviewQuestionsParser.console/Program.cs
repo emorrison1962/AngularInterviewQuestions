@@ -21,10 +21,13 @@ namespace AngularInterviewQuestionsParser.console
             var questions= p.Parse(Resource.Angular_Interview_Questions);
             foreach (var q in questions)
             {
-                //Debug.WriteLine($"{q}");
+				//Debug.WriteLine($"{q}");
+				//q.Snippets.CssSnippet = string.Empty;
+				//q.Snippets.HtmlSnippet = string.Empty;
+				//q.Snippets.TypeScriptSnippet = string.Empty;
             }
 
-            var json = Newtonsoft.Json.JsonConvert.SerializeObject(questions, Newtonsoft.Json.Formatting.Indented);
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(questions.Take(5), Newtonsoft.Json.Formatting.Indented);
             Debug.WriteLine(json);
 			new object();
 		}

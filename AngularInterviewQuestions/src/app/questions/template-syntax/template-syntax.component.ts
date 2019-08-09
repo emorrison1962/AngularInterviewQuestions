@@ -1,4 +1,3 @@
-import { QuestionAndAnswer } from './../../shared/models/question-and-answer';
 import { Observable, Subscription } from "rxjs"
 
 import { Component, OnInit, OnDestroy, AfterContentInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';

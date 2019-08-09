@@ -1,0 +1,5 @@
+<div class="card-body">
+  <textarea class="col-12" cdkTextareaAutosize
+    onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+    [(ngModel)]="snippet"></textarea>
+</div>

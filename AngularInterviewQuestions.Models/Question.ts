@@ -46,6 +46,7 @@ export class CodeSnippets implements ICodeSnippets {
     }
 
 }import { CodeSnippets } from './CodeSnippets';
+import { Answer[] } from './Answer[]';
 
 
 export interface IQuestion {
@@ -54,6 +55,7 @@ export interface IQuestion {
 	Text: string
 	Category: string
 	Snippets: CodeSnippets
+	Answers: Answer[]
 }
 
 export class Question implements IQuestion {
@@ -62,6 +64,7 @@ export class Question implements IQuestion {
 	Text: string = null;
 	Category: string = null;
 	Snippets: CodeSnippets = null;
+	Answers: Answer[] = [];
 
 	constructor(src?: IQuestion) {
 		if (src) {
@@ -69,6 +72,7 @@ export class Question implements IQuestion {
 			this.Text = src.Text;
 			this.Category = src.Category;
 			this.Snippets = src.Snippets;
+			this.Answers = src.Answers;
 		}
 	}
 

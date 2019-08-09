@@ -1,4 +1,8 @@
 <div>
+  <h5 *ngIf="answer.Text">{{answer.Text}}</h5>
+  <aiq-code-snippets [snippets]="answer.Snippets" [isReadOnly]="isReadOnly"></aiq-code-snippets>
+
+  <!-- <h5>Answer</h5>
   <ng-content>
-  </ng-content>
+  </ng-content> -->
 </div>

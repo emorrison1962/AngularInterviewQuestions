@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, } from '@angular/core';
+import { Answer } from '../../models/question';
 
 @Component({
   selector: 'aiq-answer',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnswerComponent implements OnInit {
 
+  @Input() isReadOnly: boolean;
+  @Input()
+  answer: Answer
   constructor() { }
 
   ngOnInit() {
+    console.log(this.answer);
   }
 
 }

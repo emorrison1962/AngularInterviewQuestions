@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { ContentChildren, Directive, Input, QueryList } from '@angular/core';
 import { AnswerComponent } from 'src/app/shared/components/answer/answer.component';
-import { QuestionAndAnswer } from '../../models/question-and-answer';
 import { Question } from '../../models/question';
 
 
@@ -14,26 +13,15 @@ export class QuestionComponent implements OnInit, AfterContentInit {
   @ContentChildren(AnswerComponent, { descendants: true })
   answers: QueryList<AnswerComponent>;
   unanswered: boolean;
-  _qna: QuestionAndAnswer;
-  question: Question;
-
   @Input()
-  set qna(value: QuestionAndAnswer) {
-    this.question = value.question;
-    this._qna = value;
-  }
-  get qna(): QuestionAndAnswer {
-    return this._qna;
-  }
-
-
+  question: Question;
+  isReadOnly: boolean = true;;
 
   constructor() { }
 
   ngOnInit() {
     new Object();
-    this.unanswered = this.qna.isNotAnswered;
-    //console.log(this.qna.question.Text);
+    this.unanswered = this.question.Answers.length === 0;
     new Object();
   }
 
@@ -42,6 +30,18 @@ export class QuestionComponent implements OnInit, AfterContentInit {
     if (0 === this.answers.length) {
       //this.unanswered = false;
     }
+  }
+
+  editClicked() {
+    this.isReadOnly = false;
+  }
+
+  saveClicked() {
+    this.isReadOnly = true;
+  }
+
+  cancelClicked() {
+    this.isReadOnly = true;
   }
 
 }
